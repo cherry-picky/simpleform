@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Анкета</title>
+  <style>
+  body { 
+    margin: 0px;
+    background-color: #CACACA;
+  }
+
+  body, 
+  label,
+  select,
+  button, 
+  textarea,
+  input[type="text"], 
+  input[type="submit"] {
+    font-family: Times New Roman, sans-serif;
+    font-size: 14px; 
+  }
+
+  header, 
+  footer,
+  select, 
+  button, 
+  textarea, 
+  .choosefile,
+  .outercontainer, 
+  .innercontainer, 
+  input[type="text"], 
+  input[type="submit"] {
+     border-radius: 10px;
+  }
+
+  header, 
+  footer {
+    background-color: #8CCDC4;
+    padding: 40px;
+    margin: 40px;
+    text-align: center;
+  }
+
+  .outercontainer {
+    background-color: #A26D6D;
+    padding: 20px;
+    margin: 40px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .outercontainer.row {
+    height: 200px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .innercontainer {
+    background-color: #D25370;
+    padding: 20px;
+  }
+
+  .column-2 {
+    width: 42%;
+  }
+
+  .column-3 {
+    width: 25%;
+  }
+
+  .row-2 {
+    width: 92%;
+  }
+
+  fieldset {
+    padding: 10px;
+  }
+
+  select,
+  textarea, 
+  input[type="text"] { 
+    width: 95%;
+    margin: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solid grey;
+  }
+
+  legend {
+    font-size: 16px;
+  }
+
+  a, 
+  label {
+    font-size: 15px;
+  }
+
+  input[name="text-1"], 
+  select[name="select-1"],
+  fieldset[name="fieldset-1"] {
+    margin-bottom: 10px;
+  }
+
+  textarea {
+    resize: horizontal;
+  }
+
+  input[type="file"] {
+    display: none;
+  }
+
+  .choosefile {
+    display: inline;
+    padding: 2px 6px 3px 6px;
+  }
+
+  button,
+  .choosefile,
+  input[type="submit"] {
+    background-color: #A26D6D;
+    border: 1px solid #8CCDC4;
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="innercontainer">
+      <h1>Анкета</h1>
+    </div>
+  </header>
+  <section>
+    <form id="data">
+      <div class="outercontainer">
+        <div class="innercontainer column-2">
+          <fieldset>
+            <label>
+              Текст 1
+              <input type="text" placeholder="Текст 1" name="text-1">
+            </label><br>
+            <label>
+              Текст 2 
+              <input type="text" name="text-2">
+            </label>
+          </fieldset>
+        </div>
+        <div class="innercontainer column-2">
+          <fieldset>
+            <label>
+              Большой текст
+              <textarea placeholder="Большой текст" rows="4"></textarea>
+            </label>
+          </fieldset>
+        </div>
+      </div>
+      <div class="outercontainer">
+        <div class="innercontainer column-3">
+          <fieldset name="fieldset-1">
+            <legend>Выберите 1-й флажок</legend>
+            <label>1-й флажок <input type="checkbox"></label><br>
+            <label>2-й флажок <input type="checkbox" checked></label><br>
+            <label>3-й флажок <input type="checkbox"></label>
+          </fieldset>
+          <fieldset name="fieldset-2">
+            <legend>Выберите 2-й флажок</legend>
+            <label>1-й флажок <input type="checkbox"></label><br>
+            <label>2-й флажок <input type="checkbox"></label><br>
+            <label>3-й флажок <input type="checkbox"></label>
+          </fieldset>
+        </div>
+        <div class="innercontainer column-3">
+          <fieldset>
+            <legend>Выберите из списка</legend>
+            <label>
+              Пункт 1
+              <select name="select-1">
+                <option disabled=""></option>
+                <option>Пункт 1</option>
+                <option>Пункт 2</option>
+                <option>Пункт 3</option>
+              </select>
+            </label><br>
+            <label>
+              Пункт 2
+              <select name="select-2">
+                <option selected="" disabled=""></option>
+                <option>Пункт 1</option>
+                <option>Пункт 2</option>
+                <option>Пункт 3</option>
+              </select>
+            </label><br>
+            <label>
+              Пункт 3
+              <select name="select-1">
+                <option disabled=""></option>
+                <option>Пункт 1</option>
+                <option selected="">Пункт 2</option>
+                <option>Пункт 3</option>
+              </select>
+            </label>
+          </fieldset>
+        </div>
+        <div class="innercontainer column-3">
+          <fieldset name="fieldset-1">
+            <legend>Как дела?</legend>
+            <label><input name="dela-1" type="radio" value="norm">Норм</label><br>
+            <label><input name="dela-1" type="radio" value="ok">Ок</label><br>
+            <label><input name="dela-1" type="radio" value="takoe" checked>Такое</label>
+          </fieldset>
+          <fieldset name="fieldset-2">
+            <legend>А теперь?</legend>
+            <label><input name="dela-2" type="radio" value="norm">Норм</label><br>
+            <label><input name="dela-2" type="radio" value="ok">Ок</label><br>
+            <label><input name="dela-2" type="radio" value="takoe">Такое</label>
+          </fieldset>
+        </div>
+      </div> 
+      <div class="outercontainer">
+        <div class="innercontainer row-2">
+          <label>
+            <div class="choosefile">Выберите и отправьте файл</div>
+            <input type="file"><input type="submit" value="Отправить">
+          </label>
+        </div>
+        <div class="innercontainer row-2">
+          <a href="https://webref.ru/html" target="_blank">Пройдите по ссылке</a>
+        </div>
+      </div>
+    </form>
+  </section>
+  <footer>
+    <div class="innercontainer">
+      <label>
+        Нажмите на кнопку
+        <button type="submit" form="data">Кнопка</button> 
+      </label>
+    </div>
+  </footer>
+</body>
+</html>
